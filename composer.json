@@ -10,7 +10,7 @@
         "silverstripe/framework": "^4 || ^5",
         "silverstripe/cms": "^4 || ^5"
     },
-    "license": "bsd-3",
+    "license": "BSD-3-Clause",
     "autoload": {
         "psr-4": {
             "MaximeRainville\\SilverstripeLinkfieldTester\\": "src/"
