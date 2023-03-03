@@ -1,0 +1,12 @@
+Page:
+  extensions:
+    - MaximeRainville\SilverstripeLinkfieldTester\Page
+
+SilverStripe\Assets\Folder:
+  extensions:
+    - MaximeRainville\SilverstripeLinkfieldTester\Folder
+
+SilverStripe\AssetAdmin\Forms\FolderFormFactory:
+  extensions:
+    - MaximeRainville\SilverstripeLinkfieldTester\FolderForm
+
