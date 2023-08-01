@@ -1,5 +1,8 @@
 <?php
 namespace MaximeRainville\SilverstripeLinkfieldTester;
+
+use SilverStripe\AnyField\Form\AnyField;
+use SilverStripe\AnyField\Form\ManyAnyField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\LinkField\Form\LinkField;
 use SilverStripe\LinkField\Form\MultiLinkField;
@@ -13,12 +16,12 @@ class Page extends DataExtension
     ];
 
     private static $has_many = [
-        'MyTestLinks' => Link::class,
+        'MyTestLinks' => Link::class . '.TestOwner',
     ];
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldToTab('Root.LinkTest', LinkField::create('MyTestLink'));
-        $fields->addFieldToTab('Root.LinkTest', MultiLinkField::create('MyTestLinks'));
+        $fields->addFieldToTab('Root.LinkTest', AnyField::create('MyTestLink'));
+        $fields->addFieldToTab('Root.LinkTest', ManyAnyField::create('MyTestLinks'));
     }
 }
