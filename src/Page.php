@@ -16,7 +16,7 @@ class Page extends DataExtension
     ];
 
     private static $has_many = [
-        'MyTestLinks' => Link::class . '.TestOwner',
+        'MyTestLinks' => Link::class,
     ];
 
     public function updateCMSFields(FieldList $fields)
