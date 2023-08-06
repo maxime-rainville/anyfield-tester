@@ -54,7 +54,7 @@ class Block extends BaseElement
     {
         if ($this->MyTestLink) {
             $link = $this->MyTestLink;
-            return implode($link->generateLinkDescription($link->toMap()));
+            return $link->Title . ' - ' . $link->getSummary();
         }
 
         return '';
