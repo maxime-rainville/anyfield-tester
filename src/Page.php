@@ -21,7 +21,10 @@ class Page extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldToTab('Root.LinkTest', AnyField::create('MyTestLink')->addExcludedClass(Link::class));
-        $fields->addFieldToTab('Root.LinkTest', ManyAnyField::create('MyTestLinks')->addExcludedClass(Link::class));
+        if (empty($this->getOwner()->ElementalArea)) {
+            $fields->addFieldToTab('Root.LinkTest', AnyField::create('MyTestLink')->addExcludedClass(Link::class));
+            $fields->addFieldToTab('Root.LinkTest', ManyAnyField::create('MyTestLinks')->addExcludedClass(Link::class));
+        }
+
     }
 }
