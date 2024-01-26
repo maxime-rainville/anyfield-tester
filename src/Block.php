@@ -3,8 +3,6 @@
 namespace MaximeRainville\SilverstripeLinkfieldTester;
 
 use DNADesign\Elemental\Models\BaseElement;
-use SilverStripe\AnyField\Form\AnyField;
-use SilverStripe\AnyField\Form\ManyAnyField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\LinkField\Form\LinkField;
 use SilverStripe\LinkField\Form\MultiLinkField;
@@ -44,8 +42,8 @@ class Block extends BaseElement
         $fields =  parent::getCMSFields();
 
         $fields->removeByName('MyTestLinkID');
-        $fields->addFieldToTab('Root.Main', AnyField::create('MyTestLink')->addExcludedClass(Link::class));
-        $fields->addFieldToTab('Root.Main', ManyAnyField::create('MyTestLinks')->addExcludedClass(Link::class));
+        $fields->addFieldToTab('Root.Main', LinkField::create('MyTestLink'));
+        $fields->addFieldToTab('Root.Main', MultiLinkField::create('MyTestLinks'));
 
         return $fields;
     }
@@ -54,7 +52,7 @@ class Block extends BaseElement
     {
         if ($this->MyTestLink) {
             $link = $this->MyTestLink;
-            return $link->Title . ' - ' . $link->getSummary();
+            return $link->Title . ' - ' . $link->getDescription();
         }
 
         return '';
