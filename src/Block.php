@@ -1,6 +1,6 @@
 <?php
 
-namespace MaximeRainville\SilverstripeLinkfieldTester;
+namespace MaximeRainville\AnyfieldTester;
 
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;

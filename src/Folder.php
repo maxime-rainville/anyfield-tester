@@ -1,5 +1,5 @@
 <?php
-namespace MaximeRainville\SilverstripeLinkfieldTester;
+namespace MaximeRainville\AnyfieldTester;
 use SilverStripe\LinkField\Models\Link;
 use SilverStripe\ORM\DataExtension;
 

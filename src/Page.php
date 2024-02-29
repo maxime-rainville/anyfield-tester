@@ -1,5 +1,5 @@
 <?php
-namespace MaximeRainville\SilverstripeLinkfieldTester;
+namespace MaximeRainville\AnyfieldTester;
 
 use SilverStripe\AnyField\Form\AnyField;
 use SilverStripe\AnyField\Form\ManyAnyField;
